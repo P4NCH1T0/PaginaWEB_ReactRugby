@@ -9,6 +9,7 @@ import Galery from './Pages/Galery';
 import Team from './Pages/Team';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/Contacto' element={<Contact/>}/>
         <Route path='/Login' element={<Login/>}/>
       </Routes>
+      <Footer/>
     </div>
    
   );
