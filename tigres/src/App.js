@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+
+import News from './Pages/News'
+import Landingpage from './Pages/Landingpage';
+import Calendar from './Pages/Calendar';
+import Galery from './Pages/Galery';
+import Team from './Pages/Team';
+import Contact from './Pages/Contact';
+import Login from './Pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'> 
+       <Navbar/>
+      <Routes>
+        <Route path='/' element={<Landingpage/>}/>
+        <Route path='/Noticias' element={<News/>}/>
+        <Route path='/Calendario' element={<Calendar/>}/>
+        <Route path='/Galeria' element={<Galery/>}/>
+        <Route path='/Equipo' element={<Team/>}/>
+        <Route path='/Contacto' element={<Contact/>}/>
+        <Route path='/Login' element={<Login/>}/>
+      </Routes>
     </div>
+   
   );
 }
 
