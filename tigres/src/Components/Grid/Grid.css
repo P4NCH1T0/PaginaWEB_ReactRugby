@@ -13,3 +13,6 @@
     text-align: center;
   }
   
+  .grid-item:hover {
+    box-shadow: 0 4px 6px #fab800;
+  }
